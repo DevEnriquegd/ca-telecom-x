@@ -29,30 +29,34 @@ El análisis está implementado en un notebook (`ca_telecom_x.ipynb`) diseñado 
 
 ### 2.1. Tecnologías Utilizadas
 
-|     Librería     | Propósito                                                    |
-| :--------------: | :----------------------------------------------------------- |
-|   **`pandas`**   | Carga y transformación de datos (ETL)                        |
-| **`matplotlib`** | Visualizaciones estáticas (gráficas de barras, distribución) |
-|  **`jupyter`**   | Ejecución interactiva del notebook                           |
+|    Librería    | Propósito                                       |
+| :------------: | :---------------------------------------------- |
+|   **pandas**   | Carga, limpieza y transformación de datos (ETL) |
+| **matplotlib** | Visualizaciones estáticas personalizadas        |
+|  **seaborn**   | Gráficos estadísticos (heatmaps, barplots)      |
+|  **jupyter**   | Ejecución interactiva del análisis              |
 
 ### 2.2. Archivos Clave
 
-- `ca_telecom_x.ipynb`: Notebook principal con ETL, análisis y conclusiones.
+- `ca_telecom_x.ipynb`: Notebook principal con ETL, EDA, análisis de correlación y conclusiones.
 - `requirements.txt`: Dependencias del proyecto.
-- `evasion_clientes.png`: Figura generada de la distribución de churn (se crea al ejecutar la celda correspondiente).
-- `.gitignore`: Reglas para evitar subir entornos y archivos temporales.
+- `assets/evasion_clientes.png`: Distribución general del churn.
+- `assets/matriz_correlacion.png`: Mapa de calor de correlación entre variables clave.
+- `assets/impacto_servicios.png`: Impacto de la cantidad de servicios en la tasa de churn.
+- `.gitignore`: Reglas para evitar subir archivos innecesarios.
 
 ---
 
 ## 📈 3. Visualizaciones Clave
 
-|  Nº   | Gráfico                         | Título                                                           | Métrica Clave                            |
-| :---: | :------------------------------ | :--------------------------------------------------------------- | :--------------------------------------- |
-| **1** | Distribución de churn           | **Crisis de Retención: 1 de cada 4 clientes abandona**           | Conteo y % de `churn`                    |
-| **2** | Churn por variables categóricas | **Evasión por `internet_service`, `contract`, `payment_method`** | Tasa de churn por categoría              |
-| **3** | Segmentación por cargos         | **Impacto de `charges_monthly` y `charges_total`**               | Churn por cuartiles (qcut)               |
-| **4** | Antigüedad del cliente          | **Riesgo por `tenure` (Nuevo → Muy leal)**                       | Churn por tramos de tiempo               |
-| **5** | Tablas resumen                  | **Crosstabs y estadísticas descriptivas**                        | Soporte para hipótesis y recomendaciones |
+| Nº  | Gráfico                | Título                                                 | Métrica Clave          |
+| :-: | :--------------------- | :----------------------------------------------------- | :--------------------- |
+|  1  | Distribución de churn  | **Crisis de Retención: 1 de cada 4 clientes abandona** | Conteo y % de `churn`  |
+|  2  | Churn categórico       | **Evasión por contrato, internet y método de pago**    | Tasa de churn          |
+|  3  | Segmentación de cargos | **Impacto de cargos mensuales y acumulados**           | Churn por segmentos    |
+|  4  | Antigüedad             | **Riesgo por etapa del ciclo de vida**                 | Churn por `tenure`     |
+|  5  | Correlación            | **Drivers numéricos del churn**                        | Correlaciones lineales |
+|  6  | Servicios              | **Diversificación de servicios vs evasión**            | Tasa promedio de churn |
 
 Cada gráfico está acompañado de crosstabs y comentarios interpretativos en el notebook para facilitar la lectura.
 
