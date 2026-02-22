@@ -110,5 +110,3 @@ pip install -r requirements.txt
 ## 🤝 6. Autoría
 
 Proyecto desarrollado por **Telecom X – Equipo de Análisis** (notebook preparado por el autor del repositorio).
-
-Si quieres que fije versiones en `requirements.txt`, organice las figuras en una carpeta `figures/` o haga un commit y push automático, dime cuál prefieres y lo implemento.
